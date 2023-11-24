@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <Description>My first plugin</Description>
+        <Version>1.0.0</Version>
+        <PackageId>LethalAPI.Events</PackageId>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <CodeAnalysisRuleSet>..\LethalAPI.ruleset</CodeAnalysisRuleSet>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" ExcludeAssets="RUNTIME"/>
+        <PackageReference Include="BepInEx.Core" Version="5.*" ExcludeAssets="RUNTIME"/>
+        <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" ExcludeAssets="RUNTIME"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Reference Include="Assembly-CSharp" Publicize="true" HintPath="$(LC_REFERENCES)\Assembly-CSharp.dll">
+            <Aliases>LethalCompany</Aliases>
+        </Reference>
+        <Reference Include="Unity.InputSystem" HintPath="$(LC_REFERENCES)\Unity.InputSystem.dll" />
+        <Reference Include="Unity.Netcode.Runtime" HintPath="$(LC_REFERENCES)\Unity.Netcode.Runtime.dll"/>
+        <Reference Include="Unity.TextMeshPro" HintPath="$(LC_REFERENCES)\Unity.TextMeshPro.dll"/>
+        <Reference Include="UnityEngine" HintPath="$(LC_REFERENCES)\UnityEngine.dll"/>
+        <Reference Include="UnityEngine.AudioModule" HintPath="$(LC_REFERENCES)\UnityEngine.AudioModule.dll"/>
+        <Reference Include="UnityEngine.CoreModule" HintPath="$(LC_REFERENCES)\UnityEngine.CoreModule.dll"/>
+        <Reference Include="UnityEngine.UI" HintPath="$(LC_REFERENCES)\UnityEngine.UI.dll"/>
+        <Reference Include="UnityEngine.UIModule" HintPath="$(LC_REFERENCES)\UnityEngine.UIModule.dll"/>
+
+        <ProjectReference Include="..\LethalAPI.API\LethalAPI.API.csproj" />
+        <ProjectReference Include="..\LethalAPI.Core\LethalAPI.Core.csproj" />
+    </ItemGroup>
+</Project>

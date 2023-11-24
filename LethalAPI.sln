@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LethalAPI.Core", "src\LethalAPI.Core\LethalAPI.Core.csproj", "{0C130A10-58C1-4181-9B09-334AED08950F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LethalAPI.API", "src\LethalAPI.API\LethalAPI.API.csproj", "{19310DD9-867F-4DC7-9F7C-C5F6BEF09765}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LethalAPI.Events", "src\LethalAPI.Events\LethalAPI.Events.csproj", "{777CCCD6-48E1-48E1-BE9E-2BD6938DEBE3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C130A10-58C1-4181-9B09-334AED08950F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C130A10-58C1-4181-9B09-334AED08950F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C130A10-58C1-4181-9B09-334AED08950F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C130A10-58C1-4181-9B09-334AED08950F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19310DD9-867F-4DC7-9F7C-C5F6BEF09765}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19310DD9-867F-4DC7-9F7C-C5F6BEF09765}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19310DD9-867F-4DC7-9F7C-C5F6BEF09765}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19310DD9-867F-4DC7-9F7C-C5F6BEF09765}.Release|Any CPU.Build.0 = Release|Any CPU
+		{777CCCD6-48E1-48E1-BE9E-2BD6938DEBE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{777CCCD6-48E1-48E1-BE9E-2BD6938DEBE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{777CCCD6-48E1-48E1-BE9E-2BD6938DEBE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{777CCCD6-48E1-48E1-BE9E-2BD6938DEBE3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
