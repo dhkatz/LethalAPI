@@ -1,5 +1,5 @@
 // -----------------------------------------------------------------------
-// <copyright file="PlayerEmoteStopEventArgs.cs" company="LethalLib">
+// <copyright file="PlayerEmoteStopEvent.cs" company="LethalLib">
 // Copyright (c) LethalLib. All rights reserved.
 // Licensed under the GPL-3.0 license.
 // </copyright>
@@ -15,12 +15,17 @@ using JetBrains.Annotations;
 using LethalCompany::GameNetcodeStuff;
 
 [UsedImplicitly]
-public record PlayerEmoteStopEventArgs : IPlayerEvent
+public record PlayerEmoteStopEvent : IPlayerEvent
 {
-    public PlayerEmoteStopEventArgs(PlayerControllerB playerControllerB)
+    /// <summary>
+    /// Initializes a new instance of the <see cref="PlayerEmoteStopEvent"/> class.
+    /// </summary>
+    /// <param name="playerControllerB">The <see cref="PlayerControllerB"/> instance.</param>
+    public PlayerEmoteStopEvent(PlayerControllerB playerControllerB)
     {
         Player = Player.Get(playerControllerB);
     }
 
+    /// <inheritdoc />
     public Player Player { get; set; }
 }

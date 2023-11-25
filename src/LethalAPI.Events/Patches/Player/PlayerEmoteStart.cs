@@ -32,7 +32,7 @@ internal static class PlayerEmoteStart
         return new CodeMatcher(instructions, generator)
             .SearchForward(i => i.StoresField(TimeSinceStartingEmoteFieldInfo))
             .Advance(-2)
-            .InsertEvent<PlayerEmoteStartEventArgs>(original)
+            .InsertEvent<PlayerEmoteStartEvent>(original)
             .InstructionEnumeration();
     }
 }

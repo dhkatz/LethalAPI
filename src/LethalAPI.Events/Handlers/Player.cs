@@ -18,10 +18,10 @@ public static class Player
     /// <summary>
     /// Called when the player starts emoting.
     /// </summary>
-    public static Event<PlayerEmoteStartEventArgs> PlayerEmoteStart { get; set; } = new ();
+    public static Event<PlayerEmoteStartEvent> PlayerEmoteStart { get; set; } = new ();
 
     /// <summary>
     /// Called when the player stops emoting.
     /// </summary>
-    public static Event<PlayerEmoteStopEventArgs> PlayerEmoteStop { get; set; } = new ();
+    public static Event<PlayerEmoteStopEvent> PlayerEmoteStop { get; set; } = new ();
 }

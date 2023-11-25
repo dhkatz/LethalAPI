@@ -40,7 +40,7 @@ internal static class BoomboxStop
         return new CodeMatcher(instructions, generator)
             .SearchForward(i => i.LoadsField(IsPlayingMusicFieldInfo))
             .Advance(2)
-            .InsertEvent<BoomboxStopEventArgs>(original)
+            .InsertEvent<BoomboxStopEvent>(original)
             .InstructionEnumeration();
     }
 }

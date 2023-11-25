@@ -20,11 +20,11 @@ public static class Boombox
     /// Called when the boombox starts playing.
     /// </summary>
     [UsedImplicitly]
-    public static Event<BoomboxStartEventArgs> BoomboxStart { get; set; } = new ();
+    public static Event<BoomboxStartEvent> BoomboxStart { get; set; } = new ();
 
     /// <summary>
     /// Called when the boombox stops playing.
     /// </summary>
     [UsedImplicitly]
-    public static Event<BoomboxStopEventArgs> BoomboxStop { get; set; } = new ();
+    public static Event<BoomboxStopEvent> BoomboxStop { get; set; } = new ();
 }

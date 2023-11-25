@@ -18,10 +18,10 @@ public static class Item
     /// <summary>
     /// Called when an item is picked up.
     /// </summary>
-    public static Event<ItemPickupEventArgs> ItemPickup { get; set; } = new ();
+    public static Event<ItemPickupEvent> ItemPickup { get; set; } = new ();
 
     /// <summary>
     /// Called when an item is dropped.
     /// </summary>
-    public static Event<ItemDropEventArgs> ItemDrop { get; set; } = new ();
+    public static Event<ItemDropEvent> ItemDrop { get; set; } = new ();
 }

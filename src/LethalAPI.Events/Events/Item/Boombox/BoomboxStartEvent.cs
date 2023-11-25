@@ -1,5 +1,5 @@
 // -----------------------------------------------------------------------
-// <copyright file="BoomboxStopEventArgs.cs" company="LethalLib">
+// <copyright file="BoomboxStartEvent.cs" company="LethalLib">
 // Copyright (c) LethalLib. All rights reserved.
 // Licensed under the GPL-3.0 license.
 // </copyright>
@@ -11,17 +11,19 @@ extern alias LethalCompany;
 using System;
 using LethalAPI.API.Features.Items;
 using Interfaces.Item;
+using JetBrains.Annotations;
 using BoomboxItem = LethalCompany::BoomboxItem;
 
-public sealed class BoomboxStopEventArgs : IBoomboxEvent
+[UsedImplicitly]
+public sealed class BoomboxStartEvent : IBoomboxEvent, IDeniableEvent
 {
-    public BoomboxStopEventArgs(BoomboxItem boomboxItem)
+    public BoomboxStartEvent(BoomboxItem boomboxItem)
     {
         var item = Item.Get(boomboxItem);
 
         if (item is not Boombox boombox)
         {
-            throw new NullReferenceException("Tried to create BoomboxStopEventArgs with non-boombox item!");
+            throw new NullReferenceException("Tried to create BoomboxStartEvent with non-boombox!");
         }
 
         Boombox = boombox;
@@ -32,4 +34,7 @@ public sealed class BoomboxStopEventArgs : IBoomboxEvent
 
     /// <inheritdoc />
     public Item Item => Boombox;
+
+    /// <inheritdoc />
+    public bool IsAllowed { get; set; } = true;
 }

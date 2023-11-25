@@ -35,7 +35,7 @@ internal static class BoomboxStart
         return new CodeMatcher(instructions, generator)
             .SearchForward(i => i.Calls(AudioSourcePlayMethodInfo))
             .Advance(-2)
-            .InsertDeniableEvent<BoomboxStartEventArgs>(original)
+            .InsertDeniableEvent<BoomboxStartEvent>(original)
             .InstructionEnumeration();
     }
 }

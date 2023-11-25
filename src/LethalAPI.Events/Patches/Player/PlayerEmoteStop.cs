@@ -32,7 +32,7 @@ internal class PlayerEmoteStop
         return new CodeMatcher(instructions, generator)
             .SearchForward(i => i.StoresField(PerformingEmoteFieldInfo))
             .Advance(-2)
-            .InsertEvent<PlayerEmoteStopEventArgs>(original)
+            .InsertEvent<PlayerEmoteStopEvent>(original)
             .InstructionEnumeration();
     }
 }
