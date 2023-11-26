@@ -16,17 +16,17 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Reference Include="Assembly-CSharp" Publicize="true" HintPath="$(LC_REFERENCES)\Assembly-CSharp.dll">
+        <Reference Include="Assembly-CSharp" Publicize="true" HintPath="$(LC_REFERENCES)\Assembly-CSharp.dll" Private="False" ExludeAssets="RUNTIME">
             <Aliases>LethalCompany</Aliases>
         </Reference>
-        <Reference Include="Unity.InputSystem" HintPath="$(LC_REFERENCES)\Unity.InputSystem.dll" />
-        <Reference Include="Unity.Netcode.Runtime" HintPath="$(LC_REFERENCES)\Unity.Netcode.Runtime.dll"/>
-        <Reference Include="Unity.TextMeshPro" HintPath="$(LC_REFERENCES)\Unity.TextMeshPro.dll"/>
-        <Reference Include="UnityEngine" HintPath="$(LC_REFERENCES)\UnityEngine.dll"/>
-        <Reference Include="UnityEngine.AudioModule" HintPath="$(LC_REFERENCES)\UnityEngine.AudioModule.dll"/>
-        <Reference Include="UnityEngine.CoreModule" HintPath="$(LC_REFERENCES)\UnityEngine.CoreModule.dll"/>
-        <Reference Include="UnityEngine.UI" HintPath="$(LC_REFERENCES)\UnityEngine.UI.dll"/>
-        <Reference Include="UnityEngine.UIModule" HintPath="$(LC_REFERENCES)\UnityEngine.UIModule.dll"/>
+        <Reference Include="Unity.InputSystem" HintPath="$(LC_REFERENCES)\Unity.InputSystem.dll" Private="False" ExludeAssets="RUNTIME" />
+        <Reference Include="Unity.Netcode.Runtime" HintPath="$(LC_REFERENCES)\Unity.Netcode.Runtime.dll" Private="False" ExludeAssets="RUNTIME"/>
+        <Reference Include="Unity.TextMeshPro" HintPath="$(LC_REFERENCES)\Unity.TextMeshPro.dll" Private="False" ExludeAssets="RUNTIME"/>
+        <Reference Include="UnityEngine" HintPath="$(LC_REFERENCES)\UnityEngine.dll" Private="False" ExludeAssets="RUNTIME"/>
+        <Reference Include="UnityEngine.AudioModule" HintPath="$(LC_REFERENCES)\UnityEngine.AudioModule.dll" Private="False" ExludeAssets="RUNTIME"/>
+        <Reference Include="UnityEngine.CoreModule" HintPath="$(LC_REFERENCES)\UnityEngine.CoreModule.dll" Private="False" ExludeAssets="RUNTIME"/>
+        <Reference Include="UnityEngine.UI" HintPath="$(LC_REFERENCES)\UnityEngine.UI.dll" Private="False" ExludeAssets="RUNTIME"/>
+        <Reference Include="UnityEngine.UIModule" HintPath="$(LC_REFERENCES)\UnityEngine.UIModule.dll" Private="False" ExludeAssets="RUNTIME"/>
 
         <ProjectReference Include="..\LethalAPI.API\LethalAPI.API.csproj" />
         <ProjectReference Include="..\LethalAPI.Core\LethalAPI.Core.csproj" />

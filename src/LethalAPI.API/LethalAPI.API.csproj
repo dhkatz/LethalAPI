@@ -13,16 +13,16 @@
         <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" ExcludeAssets="RUNTIME"/>
         <PackageReference Include="BepInEx.Core" Version="5.*" ExcludeAssets="RUNTIME"/>
         <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" ExcludeAssets="RUNTIME"/>
-        <PackageReference Include="SteamKit2" Version="2.5.0" />
+        <PackageReference Include="SteamKit2" Version="2.5.0" ExcludeAssets="RUNTIME"/>
     </ItemGroup>
 
     <ItemGroup>
-        <Reference Include="Assembly-CSharp" Publicize="true" HintPath="$(LC_REFERENCES)\Assembly-CSharp.dll">
+        <Reference Include="Assembly-CSharp" Publicize="true" HintPath="$(LC_REFERENCES)\Assembly-CSharp.dll" Private="False" ExcludeAssets="RUNTIME">
             <Aliases>LethalCompany</Aliases>
         </Reference>
-      <Reference Include="Unity.Netcode.Runtime" HintPath="$(LC_REFERENCES)\Unity.Netcode.Runtime.dll" />
-      <Reference Include="UnityEngine" HintPath="$(LC_REFERENCES)\UnityEngine.dll" />
-      <Reference Include="UnityEngine.AudioModule" HintPath="$(LC_REFERENCES)\UnityEngine.AudioModule.dll" />
-      <Reference Include="UnityEngine.CoreModule" HintPath="$(LC_REFERENCES)\UnityEngine.CoreModule.dll" />
+      <Reference Include="Unity.Netcode.Runtime" HintPath="$(LC_REFERENCES)\Unity.Netcode.Runtime.dll" Private="False" ExcludeAssets="RUNTIME" />
+      <Reference Include="UnityEngine" HintPath="$(LC_REFERENCES)\UnityEngine.dll" Private="False" ExcludeAssets="RUNTIME" />
+      <Reference Include="UnityEngine.AudioModule" HintPath="$(LC_REFERENCES)\UnityEngine.AudioModule.dll" Private="False" ExcludeAssets="RUNTIME" />
+      <Reference Include="UnityEngine.CoreModule" HintPath="$(LC_REFERENCES)\UnityEngine.CoreModule.dll" Private="False" ExcludeAssets="RUNTIME" />
     </ItemGroup>
 </Project>
