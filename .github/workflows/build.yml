@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Download Lethal Company
-        uses: dhkatz/steam-download@v1.1.0
+        uses: dhkatz/steam-download@v1.2.0
         with:
           username: ${{ secrets.STEAM_USERNAME }}
           vdf: ${{ secrets.STEAM_VDF }}
