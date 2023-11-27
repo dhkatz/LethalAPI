@@ -21,16 +21,34 @@ public class Item : IWrapper<GrabbableObject>
     /// </summary>
     public GrabbableObject Base { get; }
 
+    /// <summary>
+    /// Gets a value indicating whether the item is grabbable.
+    /// </summary>
     public bool IsGrabbable => Base.grabbable;
 
+    /// <summary>
+    /// Gets a value indicating whether the item is equipped.
+    /// </summary>
     public bool IsPocketed => Base.isPocketed;
 
+    /// <summary>
+    /// Gets the name of the item.
+    /// </summary>
     public string Name => Base.itemProperties.itemName;
 
+    /// <summary>
+    /// Gets the carry weight of the item.
+    /// </summary>
     public float Weight => Base.itemProperties.weight;
 
+    /// <summary>
+    /// Gets a value indicating whether the item is scrap.
+    /// </summary>
     public bool IsScrap => Base.itemProperties.isScrap;
 
+    /// <summary>
+    /// Gets a value indicating whether the item is battery powered.
+    /// </summary>
     public bool IsPowered => Base.itemProperties.requiresBattery;
 
     /// <summary>

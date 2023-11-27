@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------
-// <copyright file="IWrapper.cs" company="LethalLib">
-// Copyright (c) LethalLib. All rights reserved.
+// <copyright file="IWrapper.cs" company="LethalAPI">
+// Copyright (c) LethalAPI. All rights reserved.
 // Licensed under the GPL-3.0 license.
 // </copyright>
 // -----------------------------------------------------------------------

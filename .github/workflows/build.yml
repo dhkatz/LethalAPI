@@ -19,15 +19,16 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: 7.0.x
-      - name: Install dependencies
+      - name: Restore Projects
         run: dotnet restore
         env:
           LC_REFERENCES: "${{ github.workspace }}/LethalCompany/Lethal Company_Data/Managed"
-      - name: Build
+      - name: Build Projects
         run: dotnet build --configuration Release --no-restore
         env:
           LC_REFERENCES: "${{ github.workspace }}/LethalCompany/Lethal Company_Data/Managed"
       - uses: actions/upload-artifact@v3
+        name: Upload Artifacts
         with:
           if-no-files-found: error
           path: "**/bin/**/LethalAPI.*.dll"

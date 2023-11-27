@@ -25,6 +25,16 @@
     <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
         <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="all" ExcludeAssets="RUNTIME"/>
     </ItemGroup>
+
+    <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+        <DebugType>Full</DebugType>
+    </PropertyGroup>
+
+    <Target Name="Debug Symbols" AfterTargets="PostBuildEvent" Condition="'$(Configuration)' == 'Debug'">
+        <Message Text="Generating debug symbols for $(TargetPath)" Importance="high" />
+        <Delete Files="$(TargetPath).mdb" />
+        <Exec Command="$(SolutionDir)tools\pdb2mdb.exe $(TargetPath)" />
+    </Target>
     
     <ItemGroup>
         <None Include="$(MSBuildThisFileDirectory)*.ruleset" Link="%(Filename)%(Extension)" />

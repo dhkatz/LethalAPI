@@ -12,7 +12,7 @@ insert_final_newline = true
 [**/Patches/**/*.cs]
 dotnet_diagnostic.SA1313.severity = none
 
-[**/Handlers/**/*.cs]
+[**/Features/*/*.cs]
 dotnet_diagnostic.SA1623.severity = none
 
 [{MyPluginInfo.cs,IgnoresAccessChecksToAttribute.cs}]

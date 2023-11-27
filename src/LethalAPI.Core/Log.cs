@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------
+// <copyright file="Log.cs" company="LethalAPI">
+// Copyright (c) LethalAPI. All rights reserved.
+// Licensed under the GPL-3.0 license.
+// </copyright>
+// -----------------------------------------------------------------------
+
 namespace LethalAPI.Core;
 
 using System;

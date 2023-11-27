@@ -1,4 +1,11 @@
-﻿namespace LethalAPI.Core;
+﻿// -----------------------------------------------------------------------
+// <copyright file="Plugin.cs" company="LethalAPI">
+// Copyright (c) LethalAPI. All rights reserved.
+// Licensed under the GPL-3.0 license.
+// </copyright>
+// -----------------------------------------------------------------------
+
+namespace LethalAPI.Core;
 
 using API;
 using BepInEx;
@@ -9,9 +16,9 @@ using HarmonyLib.Tools;
 [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
 public class Plugin : BaseUnityPlugin
 {
-    private readonly Harmony _harmony = new (MyPluginInfo.PLUGIN_GUID);
+    internal static new ManualLogSource Logger { get; private set; } = null!;
 
-    internal static new ManualLogSource Logger = null!;
+    private Harmony Harmony { get; } = new (MyPluginInfo.PLUGIN_GUID);
 
     private void Awake()
     {
@@ -21,7 +28,7 @@ public class Plugin : BaseUnityPlugin
 
         Logger.LogInfo("Installing harmony patches...");
         HarmonyFileLog.Enabled = true;
-        _harmony.PatchAll();
+        Harmony.PatchAll();
 
         Logger.LogInfo("Loading boombox clips...");
         Boombox.Load();

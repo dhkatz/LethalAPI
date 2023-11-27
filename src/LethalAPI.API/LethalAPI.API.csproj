@@ -3,6 +3,7 @@
         <Description>My first plugin</Description>
         <Version>1.0.0</Version>
         <PackageId>LethalAPI.API</PackageId>
+        <LangVersion>default</LangVersion>
     </PropertyGroup>
 
     <PropertyGroup>

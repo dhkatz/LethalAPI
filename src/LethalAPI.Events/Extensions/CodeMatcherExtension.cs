@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------
-// <copyright file="CodeMatcherExtension.cs" company="LethalLib">
-// Copyright (c) LethalLib. All rights reserved.
+// <copyright file="CodeMatcherExtension.cs" company="LethalAPI">
+// Copyright (c) LethalAPI. All rights reserved.
 // Licensed under the GPL-3.0 license.
 // </copyright>
 // -----------------------------------------------------------------------
@@ -13,9 +13,10 @@ using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
 using Core;
-using HarmonyLib;
 using Events;
+using HarmonyLib;
 using Features;
+using Interfaces;
 using static HarmonyLib.AccessTools;
 
 /// <summary>

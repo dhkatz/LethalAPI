@@ -1,6 +1,6 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="Plugin.cs" company="LethalLib">
-// Copyright (c) LethalLib. All rights reserved.
+// <copyright file="Plugin.cs" company="LethalAPI">
+// Copyright (c) LethalAPI. All rights reserved.
 // Licensed under the GPL-3.0 license.
 // </copyright>
 // -----------------------------------------------------------------------
@@ -10,8 +10,8 @@ namespace LethalAPI.Events;
 using BepInEx;
 using HarmonyLib;
 using HarmonyLib.Tools;
-using static Handlers.Item.Boombox;
-using static Handlers.Player;
+using static Features.Boombox.Boombox;
+using static Features.Player.Player;
 
 /// <summary>
 /// Events plugin for Lethal Company

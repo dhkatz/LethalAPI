@@ -3,11 +3,17 @@ extern alias LethalCompany;
 namespace LethalAPI.API.Features;
 
 using System.Collections.Generic;
+using System.Linq;
 using Interfaces;
 using LethalCompany::GameNetcodeStuff;
 using UnityEngine;
 using CauseOfDeath = LethalCompany::CauseOfDeath;
+using StartOfRound = LethalCompany::StartOfRound;
 
+/// <summary>
+/// A wrapper class for <see cref="PlayerControllerB"/>.
+/// You should interact with players using this class.
+/// </summary>
 public class Player : IWrapper<PlayerControllerB>
 {
     public static Dictionary<GameObject, Player> List = new ();
@@ -31,12 +37,12 @@ public class Player : IWrapper<PlayerControllerB>
 
     public static Player Get(PlayerControllerB player)
     {
-        if (player is null)
-        {
-            return null;
-        }
-
         return List.TryGetValue(player.gameObject, out var p) ? p : new Player(player);
+    }
+
+    public static IEnumerable<Player> GetAll()
+    {
+        return StartOfRound.Instance.allPlayerScripts.Select(Get);
     }
 
     public void Emote()
